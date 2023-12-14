@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form th:action="@{/registro}" class="form" id="registro-form" method="POST" enctype="multipart/form-data">
+            <h2 class="titulo">Regístrate</h2>
+            <div class="flex">
+                <label>
+                    <input type="text" class="input" name="nombre" th:value="${nombre}" required />
+                    <span>Nombre</span>
+                </label>
+                <label>
+                    <input type="text" class="input" name="apellido" th:value="${apellido}" required />
+                    <span>Apellido</span>
+                </label>
+            </div>
+            <label>
+                <input type="email" name="email" th:value="${email}" required class="input" />
+                <span>Email</span>
+            </label>
+            <label>
+                <input type="text" name="nombreUsuario" th:value="${nombreUsuario}" required class="input" />
+                <span>Nombre de usuario</span>
+            </label>
+            <div class="flex">
+                <label>
+                    <input type="password" name="password" required class="input" />
+                    <span>Contraseña</span>
+                </label>
+                <label>
+                    <input type="password" name="password2" required class="input" />
+                    <span>Repita la contraseña</span>
+                </label>
+            </div>
+            <label>
+                <input type="file" name="archivo" class="input" />
+                <!-- <span>Foto de perfil</span> -->
+            </label>
+            <br>
+            <button type="submit">Registrar</button>
+        </form>
+    </body>
+</html>
