@@ -62,7 +62,7 @@ public class ControladorPrincipal {
     @GetMapping("/loguear") // localhost:8080
     public String login(@RequestParam(required = false) String error, ModelMap modelo) {
         if (error != null) {
-            modelo.put("error", "Usuario o contraseña inválido.");
+
         }
         return "Login.html";
     }
